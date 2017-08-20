@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>LOGIN</title>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS - A link from materialze css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <script
+      src="https://code.jquery.com/jquery-3.1.0.js"
+      integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-signin" action="login.js" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="email" class="sr-only">Username</label>
+            <input type="text" name ="email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name ="password" required>
+          </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+  </body>
+</html>
