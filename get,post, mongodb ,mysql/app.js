@@ -60,4 +60,33 @@ app.post('/register',function(req,res){
   console.log(req.body.test);
   res.json({ status: 'SUCCESS' });
 });
+//for mysql
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+   host     : 'localhost',
+   user     : 'root',
+   password : 'root',
+   database : 'laxman'
+ });
+
+ connection.connect(function(err){
+ if(!err) {
+     console.log("Database is connected ... \n\n");
+ } else {
+     console.log("Error connecting database ... \n\n");
+ }
+ });
+
+ app.get("/firstQuery",function(req,res){
+ connection.query('SELECT * from MyGuests', function(err, rows, fields) {
+ connection.end();
+   if (!err) {
+     console.log('The solution is: ', rows);
+     res.json(rows);
+   }
+   else
+     console.log('Error while performing Query.');
+   });
+ });
+
 app.listen(3000, '0.0.0.0', () => console.log('Example app listening on port 3000!'))
