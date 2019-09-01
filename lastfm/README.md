@@ -1,5 +1,5 @@
-# classplus
-After downloading or cloning the repo execute below commands in classplus project</br>
+# Lastfm
+After downloading or cloning the repo execute below commands in lastfm project</br>
 $ npm install</br>
 $ npm app.js</br>
 --------------------------------------------------------------------</br>
